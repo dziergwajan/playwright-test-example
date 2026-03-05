@@ -13,6 +13,8 @@ The test framework is designed to avoid duplication and abstract away complexiti
 3. **Custom Fixtures** (`/fixtures/baseTest.ts`): Built on top of Playwright's native `test.extend`, the custom fixture instantiates the `PageManager` (`app`) and directly injects it into every test along with default test data (`defaultUser`).
 4. **Data Management** (`/types` & `.env`): Test data (e.g. user credentials) is strictly typed via TypeScript interfaces and entirely managed via Environment Variables (`.env`) to ensure security and scalability.
 
+---
+
 ## Test data prerequisites
 
 To maintain test reliability and performance, this example assumes the use of a whitelisted test account that bypasses any MFA (Multi-Factor Authentication) and 'Remember This Device' fingerprinting. In a real-world scenario, this is achieved by using a dedicated service account with MFA and fingerprinting disabled or by injecting an automation-specific bypass header in the staging environment.
